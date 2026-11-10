@@ -1,0 +1,13 @@
+project:
+  title: "LUX Gesundheitswirtschaft – Digitale Resilienz"
+  output-dir: _output
+
+lang: de
+
+# Die PowerPoint entsteht mit scripts/build_pptx.py (siehe README).
+# Pandoc erzeugt mit der Hochschulvorlage Dateien, die PowerPoint nicht öffnen kann.
+# quarto render liefert eine HTML-Fassung als Reserve.
+format:
+  revealjs:
+    embed-resources: true
+    slide-level: 2
