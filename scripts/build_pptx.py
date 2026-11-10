@@ -65,7 +65,8 @@ def parse_qmd(text):
         bg = re.search(r'background-color="(#[0-9a-fA-F]{6})"', attrs)
         return {"title": title, "blocks": [[]], "notes": [], "fragment": [],
                 "background": bg.group(1) if bg else None,
-                "section": ".section" in attrs, "image": None}
+                "section": ".section" in attrs, "klein": ".klein" in attrs,
+                "image": None}
 
     slides = [new_slide(None)]  # Titelfolie
     cur = slides[0]
@@ -101,7 +102,9 @@ def parse_qmd(text):
             continue
         img = re.match(r"^!\[(.*?)\]\((.*?)\)", line.strip())
         if img and "notes" not in stack:
-            cur["image"] = (img.group(2), img.group(1))
+            if cur["image"]:
+                cur.setdefault("images", [cur["image"]]).append((img.group(2), img.group(1)))
+            cur["image"] = cur["image"] or (img.group(2), img.group(1))
             continue
         if "notes" in stack:
             cur["notes"].append(line)
@@ -186,7 +189,7 @@ def add_runs(paragraph, text, size=None, force_bold=None, force_italic=None):
                 run.font.size = Pt(size)
 
 
-def fill(text_frame, lines, thesen=False, spalte=False):
+def fill(text_frame, lines, thesen=False, spalte=False, klein=False):
     text_frame.clear()
     first = True
     first_para = True
@@ -196,6 +199,8 @@ def fill(text_frame, lines, thesen=False, spalte=False):
         first = False
         if spalte:
             size = SPALTE_KOPF_PT if kind == "kern" else SPALTE_PT
+            if klein:  # z. B. Quellenfolie: viel Text
+                size = 15 if kind == "kern" else 13
         elif kind in ("kern", "zitat"):
             size = KERN_PT
         elif kind == "hinweis":
@@ -358,8 +363,8 @@ def add_content_slide(prs, sd, blocks):
     s.shapes.title.text = sd["title"]
     thesen = sd["title"] == "Debriefing"
     if two:
-        fill(s.placeholders[1].text_frame, blocks[0], spalte=True)
-        fill(s.placeholders[14].text_frame, blocks[1], spalte=True)
+        fill(s.placeholders[1].text_frame, blocks[0], spalte=True, klein=sd.get("klein", False))
+        fill(s.placeholders[14].text_frame, blocks[1], spalte=True, klein=sd.get("klein", False))
         remove_unused(s, {0, 1, 14})
     else:
         fill(s.placeholders[1].text_frame, blocks[0], thesen=thesen)
@@ -373,6 +378,8 @@ def add_content_slide(prs, sd, blocks):
 def add_image_slide(prs, sd, blocks):
     """Bild rechts, Text links; ohne Text: Bild über die ganze Breite."""
     hat_text = any(l.strip() for l in blocks[0])
+    if len(sd.get("images", [])) == 2:
+        return add_two_image_slide(prs, sd, blocks)
     path, alt = sd["image"]
     breit = False
     if hat_text and (ROOT / path).exists():
@@ -403,6 +410,30 @@ def add_image_slide(prs, sd, blocks):
     else:
         remove_unused(s, {0})
         add_picture_fit(s, path, alt, 371475, 1324947, 11449050, 4767878)
+    footer_placeholders(s, None)
+    set_notes(s, sd["notes"])
+
+
+def add_two_image_slide(prs, sd, blocks):
+    """Text oben, zwei Bilder nebeneinander darunter, je mit kleiner Bildunterschrift."""
+    s = prs.slides.add_slide(layout(prs, "Title and Content"))
+    s.shapes.title.text = sd["title"]
+    ph = s.placeholders[1]
+    ph.left, ph.top, ph.height, ph.width = 371475, 1324947, 1300000, 11449050
+    fill(ph.text_frame, blocks[0])
+    remove_unused(s, {0, 1})
+    gap = 300000
+    bw = (11449050 - gap) // 2
+    top, bh = 3050000, 2800000
+    for i, (path, alt) in enumerate(sd["images"]):
+        left = 371475 + i * (bw + gap)
+        add_picture_fit(s, path, alt, left, top, bw, bh)
+        tb = s.shapes.add_textbox(left, top + bh + 30000, bw, 300000)
+        p = tb.text_frame.paragraphs[0]
+        from pptx.enum.text import PP_ALIGN
+        p.alignment = PP_ALIGN.CENTER
+        r = p.add_run(); r.text = alt
+        r.font.size = Pt(11); r.font.color.rgb = RGBColor(0x55, 0x55, 0x55)
     footer_placeholders(s, None)
     set_notes(s, sd["notes"])
 

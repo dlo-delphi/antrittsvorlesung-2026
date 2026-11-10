@@ -17,7 +17,8 @@ Ohne Begrüßungsfloskel einsteigen, direkt mit der nächsten Folie.
 
 ## 19. Juli 2024
 
-![Bluescreens an der Gepäckausgabe, LaGuardia Airport](bilder/crowdstrike_lga.jpg)
+![LaGuardia Airport, 19.07.2024 · Foto: Smishra1, CC BY-SA](bilder/crowdstrike_lga.jpg)
+![Handgeschriebene Bordkarte, Indien, 19.07.2024 · Foto: Akshay Kothari (@akothari), X](bilder/bordkarte.jpg)
 
 **Die Flugzeuge waren in Ordnung.\
 Ausgefallen ist alles drumherum.**
@@ -96,17 +97,33 @@ Diese vier Prinzipien sind die Gliederung des Vortrags.
 
 ## Zweiter Weltkrieg, Boeing B-17
 
+![Fahrwerk- und Klappenschalter der B-17, nebeneinander](bilder/b17_schalter.jpg)
+![B-17 nach einer Bauchlandung](bilder/b17_bauchlandung.jpg)
+
+**Zwei gleiche Schalter, nebeneinander.**
+
+*Nach der Landung, beim Ausrollen, griffen müde Piloten zum falschen.*
+
+::: notes
+(ca. 1,5 Min.) [7:00–8:30]
+Panel in die erste Reihe geben: „Woran erkennen Sie blind, dass das das Fahrwerk ist?"
+- Links: das Bedienpanel der B-17. Rot markiert: GEAR und WING FLAP – zwei gleiche Kippschalter.
+- B-17 im Zweiten Weltkrieg: Nach der Landung, beim Ausrollen, fahren erschöpfte Piloten
+  das Fahrwerk ein statt der Landeklappen.
+- Rechts: eine B-17 auf dem Bauch. NICHT behaupten, dass genau dieses Flugzeug
+  wegen einer Schalterverwechslung so liegt – das Foto zeigt nur, wie so etwas endet.
+- Damals hieß das: Pilotenfehler.
+:::
+
+## Die Antwort war Form
+
 ![Fahrwerkshebel mit Rad, Klappenhebel mit Keil](bilder/hebel_formcodierung.png)
 
 **Aus „Pilotenfehler“\
 wurde „Konstruktionsfehler“.**
 
 ::: notes
-(ca. 3 Min.) [7:00–10:00]
-Panel in die erste Reihe geben: „Woran erkennen Sie blind, dass das das Fahrwerk ist?"
-- B-17 im Zweiten Weltkrieg: Nach der Landung, beim Ausrollen, fahren erschöpfte Piloten
-  das Fahrwerk ein statt der Landeklappen. Die Schalter sahen gleich aus und lagen nebeneinander.
-- Ursprünglich Kippschalter, keine Hebel.
+(ca. 1,5 Min.) [8:30–10:00]
 - Der Psychologe Alphonse Chapanis erkennt: kein Pilotenfehler, sondern ein Konstruktionsfehler.
 - Lösung: kein Training, keine Strafe – Form. Ein kleines Rad am Fahrwerkshebel,
   ein Keil am Klappenhebel.
@@ -117,7 +134,7 @@ Panel in die erste Reihe geben: „Woran erkennen Sie blind, dass das das Fahrwe
 
 ## Hawaii, 13. Januar 2018
 
-![Nachbildung des Menüs (Hawaii Emergency Management Agency)](bilder/hawaii_menue.jpg)
+![Warnmeldung vom 13. Januar 2018](bilder/hawaii_menue.jpg)
 
 **Übung und Ernstfall:\
 zwei Einträge im selben Menü.**
@@ -169,6 +186,35 @@ Fast 900 Millionen gingen raus.**
 Erst die These stehen lassen, dann klicken für den zweiten Satz.
 „Wo ist das Rad am Hebel in Ihrer IT?" – Frage offen lassen, nicht beantworten.
 Panel zurückholen.
+:::
+
+## Wer war schuld?
+
+![Wer war schuld? – Was verbessern wir?](bilder/schuld-oder-lernen.png)
+
+**Die IT fragt: Wer hat geklickt?\
+Die Luftfahrt fragt: Was hat ihn klicken lassen?**
+
+*Hawaii: Der Mitarbeiter wurde entlassen. Die Ursachen lagen im Ablauf.*
+
+::: notes
+(ca. 2 Min.) – Zeit an anderer Stelle einsparen
+- IT-Reflex: Phishing-Klicker an den Pranger, „Layer 8", „das Problem sitzt vor dem Bildschirm".
+  Folge: Fehler werden versteckt, Meldungen kommen spät, derselbe Fehler kehrt zurück.
+- Luftfahrt: Unfalluntersuchungen dienen nach ICAO Annex 13 nicht der Schuldzuweisung.
+  NASA-Meldesystem ASRS seit 1976: vertraulich melden, dafür begrenzter Schutz vor Sanktionen.
+  EU-VO 376/2014: „Just Culture" ist Gesetz.
+- Wichtig: Just Culture heißt nicht „keine Konsequenzen". Vorsatz und grobe Fahrlässigkeit bleiben
+  ausgenommen. Es geht um ehrliche Fehler.
+- Hawaii: Der Mitarbeiter wurde entlassen, der Behördenleiter trat zurück. Der stellvertretende
+  Leiter sagte beim Rücktritt sinngemäß, man habe den Mitarbeiter in eine Lage gebracht, in der er
+  scheitern musste. Ursachen laut FCC: unangekündigte Übung beim Schichtwechsel, missverständliche
+  Ansage, keine vorbereitete Widerrufsmeldung (38 Minuten).
+  NICHT behaupten, die Entlassung sei nur ein Sündenbock gewesen – der Mann hatte laut interner
+  Untersuchung eine lange Vorgeschichte.
+- Gegenbeispiel aus der IT: Cloudflare 2019, öffentliches Post-Mortem ohne Namen.
+- Rückbezug Lehre: Genau das üben wir in der Einführung zur Cyber-Resilienz – Blame-free Post-Mortems,
+  psychologische Sicherheit (Edmondson).
 :::
 
 ## Akt 2 · Der Autopilot {.section}
@@ -283,6 +329,8 @@ Kurz stehen lassen. „Das gilt für Organisationen. Und es gilt für KI."
 **208 Sekunden.\
 Die Checkliste war für große Höhe geschrieben.**
 
+*Im Notfall fällt man nicht auf das Niveau der Dokumentation zurück, sondern auf das Niveau der Übung.*
+
 ::: notes
 (ca. 3 Min.) [24:30–27:30]
 - A320 startet in LaGuardia, Vogelschlag, beide Triebwerke verlieren fast den gesamten Schub.
@@ -292,6 +340,10 @@ Die Checkliste war für große Höhe geschrieben.**
 - Sullenberger startet die APU sofort, viel früher als in der Checkliste vorgesehen.
 - Das NTSB empfahl danach u. a. Checklisten für den Doppelausfall in geringer Höhe.
 - Lehre: Der Plan war für den falschen Fall geschrieben. Geholfen haben Training und Urteilskraft.
+  Satz auf der Folie langsam vorlesen: „Im Notfall fällt man nicht auf das Niveau der Dokumentation
+  zurück, sondern auf das Niveau der Übung."
+- Herkunft: eigene Zuspitzung, frei nach dem Militärspruch „You don't rise to the level of your
+  expectations, you fall to the level of your training". NICHT Archilochos zuschreiben – dafür gibt es keinen Beleg.
   „Ihr Notfallhandbuch ist auch für einen bestimmten Fall geschrieben. Für welchen?"
 :::
 
@@ -525,19 +577,39 @@ Mögliche Frage für die Diskussion, falls es stockt:
 Panels bleiben für das Gespräch danach stehen.
 :::
 
-## Quellen
+## Quellen {.klein}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Fälle**
 
 - CrowdStrike 19.07.2024: Microsoft (D. Weston), 20.07.2024
 - Chapanis/B-17: UX Magazine; 14 CFR § 25.781
-- Hawaii 2018: FCC-Untersuchungsbericht; Hawaii EMA (Faksimile)
+- Hawaii 2018: FCC-Untersuchungsbericht; Civil Beat, 30.01.2018
 - Citibank/Revlon: SDNY 2021; 2nd Circuit 2022
 - AF447: BEA, Final Report (Juli 2012)
 - US Airways 1549: NTSB/AAR-10/03
-- A320-Flugsteuerung: Traverse/Lacaze/Souyris, Airbus Fly-by-Wire
 - Maersk/NotPetya: A. Greenberg, WIRED (2018)
 - 737 MAX: Joint Authorities Technical Review (2019)
+:::
+::: {.column width="50%"}
+**Regeln und Technik**
+
+- A320-Flugsteuerung: Traverse/Lacaze/Souyris, Airbus Fly-by-Wire
 - Part-IS: VO (EU) 2022/1645 und 2023/203
 - Cyber Resilience Act: VO (EU) 2024/2847
+- Just Culture: ICAO Annex 13; NASA ASRS; VO (EU) 376/2014
+
+**Bildnachweise**
+
+- LaGuardia: Smishra1, Wikimedia Commons, CC BY-SA
+- Bordkarte: Akshay Kothari (@akothari), X, 19.07.2024
+- Flexcube: Gerichtsakte SDNY 2021, via Core77
+- Hudson: Greg L, Wikimedia Commons, CC BY 2.0
+- B-17-Panel und Bauchlandung: QUELLE ERGÄNZEN
+- Schaubilder: eigene Darstellung
+:::
+::::
 
 ::: notes
 Nur für die PDF-Fassung, nicht im Vortrag zeigen.
