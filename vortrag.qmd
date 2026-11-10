@@ -98,7 +98,7 @@ Diese vier Prinzipien sind die Gliederung des Vortrags.
 ## Zweiter Weltkrieg, Boeing B-17
 
 ![Fahrwerk- und Klappenschalter der B-17, nebeneinander](bilder/b17_schalter.jpg)
-![B-17 nach einer Bauchlandung](bilder/b17_bauchlandung.jpg)
+![B-17 42-38084 (97th BG) nach einer Bruchlandung](bilder/b17_bauchlandung.jpg)
 
 **Zwei gleiche Schalter, nebeneinander.**
 
@@ -608,7 +608,7 @@ Panels bleiben für das Gespräch danach stehen.
 - Flexcube: Gerichtsakte SDNY 2021, via Core77
 - Hudson: Greg L, Wikimedia Commons, CC BY 2.0
 - B-17-Panel: The Aviation Geek Club (D. Leone), 21.05.2023
-- B-17-Bauchlandung: QUELLE ERGÄNZEN
+- B-17 42-38084 (97th BG): Sgt. Lloyd Merrifield, via Tim Merrifield / reddog1944.com
 - Schaubilder: eigene Darstellung
 :::
 ::::
