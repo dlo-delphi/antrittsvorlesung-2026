@@ -27,3 +27,12 @@ Inhalt und Sprechernotizen: `vortrag.qmd`. Design: `vorlage/hs-mainz.pptx`.
 | `hudson_1549.jpg` | US Airways 1549 auf dem Hudson | Wikimedia Commons „Miracle on the Hudson.jpg“ (Greg L, CC BY 2.0) |
 
 Fehlt eine Datei, zeigt die Folie einen grauen Platzhalter mit Dateinamen.
+
+## Handout (zwei Seiten, PDF)
+
+```bash
+quarto render handout.qmd --to typst    # -> _output/handout.pdf
+```
+
+Layout (Logo, Fußzeile, Schrift) in `vorlage/page.typ`, kompakter Titelblock in `vorlage/typst-template.typ`.
+Vorlage übernommen aus dem LUX-Vortrag. Das Handout muss auf genau zwei Seiten bleiben (Doppelseite).
